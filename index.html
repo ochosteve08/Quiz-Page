@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="documenting my web development journey #100dayofcoding">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A simple Quiz Page</title>
+ <!-- stylesheets-->
+<link rel="stylesheet" href="./quiz.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous" />
+
+</head>
+<body>
+ 
+<header>
+    <img id="logo" src="./quiz_logo.png" alt="logo"/>
+    <h1>HTML/CSS QUIZ </h1>
+ <nav>
+    <ul>
+        <li><a href="#student-info" target="_self">INFO</a> </li>
+        <li><a href="#html-questions">HTML</a> </li>
+        <li><a href="#css-question">CSS</a> </li>
+    </ul>
+   
+    
+ </nav>
+</header>
+<main>
+    <form method="post" action="https://freecodecamp.org/practice-project/accessibility-quiz" >
+        <section aria-labelledby="student-info" role="region">
+            <h2 id="student-info">STUDENT-INFO</h2>
+            <div class="info">
+                <label for="name">Name: </label>
+                <input name="fullname" type="text" id="name" aria-placeholder="fullnames" />
+            </div>
+            <div class="info">
+                <label for="email">Email: </label>
+                <input name="email" type="email" id="email" />
+            </div>
+            <div class="info">
+                <label for="birth-date">D.O.B.:</label>
+                <input type="date" name="birth-date" id="birth-date" />
+            </div>
+        </section>
+        <section aria-labelledby="html-questions" role="region">
+            <h2 id="html-questions">HTML-QUESTIONS</h2>
+            <div class="question-block">
+                <p>1</p>
+                <legend>The legend element represents a caption for the content of its parent fieldset element</legend>
+                <fieldset class="question" name="html-question-one">
+                    <ul class="answers-list">
+                        <li>
+                            <label for="q1-a1">
+                                <input name="q1" id="q1-a1" type="radio" value="true" checked >True
+                            </label>
+                        </li>
+                        <li>
+                            <label for="q1-a2">
+                                <input name="q1" id="q1-a2" type="radio" value="false">False
+                            </label>
+                        </li>
+                    </ul>
+                </fieldset>
+            </div>
+            <div class="question-block">
+                <p>2</p>
+                <legend>A label element nesting an input element is required to have a for attribute with the same value as the input's id </legend>
+                    <fieldset class="question" name="html-question-two">
+                        <ul class="answers-list">
+                            <li>
+                                <label for="q2-a1">
+                                    <input name="q1" id="q2-a1" type="radio" value="true" >True
+                                </label>
+                            </li>
+                        <li>
+                            <label for="q2-a2">
+                                <input name="q1" id="q2-a2" type="radio" value="false">False
+                            </label>
+                        </li>
+                        </ul>
+                    </fieldset>
+               
+            </div>
+        </section>
+        <section aria-labelledby="css-question" role="region">
+            <h2 id="css-question" >CSS QUESTIONS</h2>
+           
+            <div class="formrow">
+                <div class="question-block">
+                    <label for="customer">
+                       Are you an frontend developer? 
+                    </label>
+                </div>
+                <div class="answer">
+                    <select name="customer" id="customer" required>
+                        <option value="">Select an option</option>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>
+                  
+                </div>
+                 <div class="question-block">
+                    <label for="css-questions">Do you have any questions:</label>
+                 </div>
+                <div class="answer">
+                    <textarea name="css-questions" id="css-questions" rows="5" cols="24" placeholder="for all enquiries"></textarea>
+                </div>
+            </div>
+        </section>
+        <button type="submit" value="submit">Submit</button>
+    </form>
+    
+</main>
+<footer>
+    <address>
+        <a href="https://freecodecamp.org" target="blank">Phoenix Concept</a><br/>
+        Lagos<br/>
+        Nigeria.<br/>
+        
+    </address>
+</footer>
+</body>
+</html>
